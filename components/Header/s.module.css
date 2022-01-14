@@ -1,0 +1,58 @@
+/* Declare here the classes used for the header */
+.test {
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1366px;
+  padding: 16px;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.leftContainer {
+  display: flex;
+}
+
+.rightContainer {
+  display: flex;
+}
+
+.whatsappLink {
+  background-color: #000000;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.whatsappLink:hover {
+  background-color: #bdff00;
+}
+
+.whatsappLink:hover svg {
+  color: #000;
+}
+
+.phoneLink {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #bdff00;
+  height: 50px;
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.phoneLink:hover {
+  background-color: #000000;
+  color: #fff;
+}
