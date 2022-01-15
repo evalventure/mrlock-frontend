@@ -21,6 +21,7 @@ export function Header() {
             className={s.facebookLink}
             href="https://www.facebook.com/mrlock247"
             target="_blank"
+            rel="noreferrer"
           >
             <FacebookIcon />
           </a>
@@ -28,6 +29,7 @@ export function Header() {
             className={s.googleLink}
             href="https://goo.gl/maps/oUnmAauoDc2QTeoy7"
             target="_blank"
+            rel="noreferrer"
           >
             <GoogleIcon />
           </a>

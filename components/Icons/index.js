@@ -37,8 +37,6 @@ export function FacebookIcon() {
       fill="none"
       viewBox="0 0 10 20"
       style={{ width: 16, height: 16 }}
-      fill="none"
-      viewBox="0 0 18 18"
     >
       <path
         fill="#000"
