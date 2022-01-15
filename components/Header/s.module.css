@@ -2,6 +2,10 @@
 .test {
 }
 
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -9,15 +13,56 @@
   max-width: 1366px;
   padding: 16px;
   margin: 0 auto;
-  border-bottom: 1px solid #e5e5e5;
 }
 
 .leftContainer {
   display: flex;
 }
 
+.logo {
+  width: 56px !important;
+}
+
 .rightContainer {
   display: flex;
+}
+
+.mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 16px;
+}
+
+.facebookLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.facebookLink:hover {
+  background-color: #bdff00;
+}
+
+.googleLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  margin-left: 8px;
+}
+
+.googleLink:hover {
+  background-color: #bdff00;
 }
 
 .whatsappLink {
@@ -29,6 +74,7 @@
   align-items: center;
   cursor: pointer;
   color: #fff;
+  margin-left: 8px;
 }
 
 .whatsappLink:hover {
@@ -42,7 +88,7 @@
 .phoneLink {
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 16px;
   background-color: #bdff00;
   height: 50px;
   margin-left: 8px;
@@ -55,4 +101,51 @@
 .phoneLink:hover {
   background-color: #000000;
   color: #fff;
+}
+
+.phoneLink span:nth-child(1) {
+  display: none;
+}
+
+.phoneLink span:nth-child(1) svg {
+  width: 24px !important;
+  height: 24px !important;
+  margin-right: 12px;
+}
+
+@media all and (min-width: 426px) {
+  .logo {
+    width: 83px !important;
+  }
+
+  .phoneLink {
+    padding: 0 24px;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .phoneLink span:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+
+  .phoneLink span:nth-child(2) {
+    display: none;
+  }
+
+  .phoneLink {
+    margin-left: 24px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .mail {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .container {
+    padding: 16px 40px;
+  }
 }

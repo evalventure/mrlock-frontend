@@ -2,35 +2,59 @@
  * Here are the styles imported.
  * Usage: <div className={s.myCustomClass} />
  */
-import { PhoneIcon } from "../Icons";
+import { PhoneIcon, GoogleIcon, FacebookIcon, PhoneStarIcon } from "../Icons";
 import s from "./s.module.css";
 
 export function Header() {
   // TODO: Replace null with the HTML code for the header
   return (
-    <header>
+    <header className={s.header}>
       <div className={s.container}>
         <div className={s.leftContainer}>
-          <Logo />
+          <Logo className={s.logo} />
         </div>
         <div className={s.rightContainer}>
-          <a className={s.whatsappLink}>
+          <a className={s.mail} href="mailto: mrlock247@gmail.com">
+            mrlock247@gmail.com{" "}
+          </a>
+          <a
+            className={s.facebookLink}
+            href="https://www.facebook.com/mrlock247"
+            target="_blank"
+          >
+            <FacebookIcon />
+          </a>
+          <a
+            className={s.googleLink}
+            href="https://goo.gl/maps/oUnmAauoDc2QTeoy7"
+            target="_blank"
+          >
+            <GoogleIcon />
+          </a>
+          <a className={s.whatsappLink} href="https://wa.me/447979374288">
             <PhoneIcon />
           </a>
-          <a className={s.phoneLink}>+44 7979 374288</a>
+          <a className={s.phoneLink}>
+            <span>
+              <PhoneIcon />
+              +44 7979 374288
+            </span>
+            <span>Call us</span>
+          </a>
         </div>
       </div>
     </header>
   );
 }
 
-function Logo() {
+function Logo({ style = {}, ...rest }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 83 50"
-      style={{ width: 83, height: 50 }}
+      style={{ width: 83, height: 50, ...style }}
+      {...rest}
     >
       <path
         fill="#000"
