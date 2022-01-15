@@ -3,7 +3,8 @@
 }
 
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--header-border-color);
+  background-color: var(--header-background-color);
 }
 
 .container {
@@ -21,6 +22,7 @@
 
 .logo {
   width: 56px !important;
+  color: var(--header-logo-color);
 }
 
 .rightContainer {
@@ -28,6 +30,7 @@
 }
 
 .mail {
+  color: var(--header-email-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +69,7 @@
 }
 
 .whatsappLink {
-  background-color: #000000;
+  background-color: var(--header-whatsapp-background-color);
   width: 50px;
   height: 50px;
   display: flex;
@@ -75,6 +78,10 @@
   cursor: pointer;
   color: #fff;
   margin-left: 8px;
+}
+
+.whatsappLink svg {
+  color: var(--header-whatsapp-icon-color);
 }
 
 .whatsappLink:hover {
