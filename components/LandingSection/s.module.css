@@ -1,0 +1,95 @@
+.landingSection {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1366px;
+  padding: 60px 16px;
+  margin: auto;
+}
+
+.rightContainer {
+  display: block;
+}
+
+.title {
+  margin: 0;
+  font-family: "Fjalla One";
+  font-weight: 400;
+  font-size: 50px;
+  margin-bottom: 24px;
+}
+
+.description {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Open Sans";
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.learnMoreButton {
+  padding: 10px 20px;
+  color: var(--color-green);
+  background-color: #000;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  margin-top: 40px;
+}
+
+@media all and (min-width: 769px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .leftContainer {
+    width: 100%;
+    padding-right: 40px;
+  }
+
+  .rightContainer {
+    width: 100%;
+    max-width: 382px;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .container {
+    padding: 80px 40px;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+}
+
+@media all and (min-width: 1441px) {
+  .title {
+    font-size: 100px;
+  }
+}
+
+@media all and (prefers-color-scheme: dark) {
+  .title {
+    color: var(--color-white);
+  }
+
+  .description {
+    color: var(--color-white);
+  }
+
+  .learnMoreButton {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+}

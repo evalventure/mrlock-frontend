@@ -4,6 +4,7 @@
   --color-dark-grey: #2e2d2d;
   --color-medium-grey: #5b5b5b;
   --color-light-grey: #dddddd;
+  --color-green: #bdff00;
 
   --header-background-color: var(--color-white);
   --header-email-color: var(--color-black);

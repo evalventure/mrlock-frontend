@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Header } from "../components/Header";
+import { LandingSection } from "../components/LandingSection";
 
 export default function Home() {
   return (
@@ -11,11 +12,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@400;600;700&display=swap"
           rel="stylesheet"
-        />
+        ></link>
       </Head>
       <Header />
+      <main>
+        <LandingSection />
+      </main>
     </div>
   );
 }
