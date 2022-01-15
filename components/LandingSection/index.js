@@ -1,4 +1,5 @@
 import s from "./s.module.css";
+import { Icon1, Icon2, Icon3, Icon4 } from "../Icons";
 
 export function LandingSection() {
   return (
@@ -16,6 +17,24 @@ export function LandingSection() {
             replacement keys today.
           </p>
           <button className={s.learnMoreButton}>Learn more</button>
+        </div>
+      </div>
+      <div className={s.featuresContainer}>
+        <div className={s.feature}>
+          <Icon1 />
+          Fast Roadside Response
+        </div>
+        <div className={s.feature}>
+          <Icon2 />
+          Back on the Road in 1 Hour
+        </div>
+        <div className={s.feature}>
+          <Icon3 />
+          Fully Insured
+        </div>
+        <div className={s.feature}>
+          <Icon4 />
+          Fully mobile
         </div>
       </div>
     </section>
