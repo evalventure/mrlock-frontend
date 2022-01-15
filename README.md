@@ -1,12 +1,14 @@
 # Mr Lock 24/7
 
+[Preview URL here](https://mrlock-demo.surge.sh)
+
 Address: https://mrlock247.co.uk/
 
 Design: https://www.figma.com/file/wTtlUQAcV7yHPjt5x2yOcU/2021-12-01---Mr.-Lock---website---v1---BD?node-id=0%3A1
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
