@@ -36,7 +36,7 @@ export function Header() {
           <a className={s.whatsappLink} href="https://wa.me/447979374288">
             <PhoneIcon />
           </a>
-          <a className={s.phoneLink}>
+          <a className={s.phoneLink} href="tel:+447979374288">
             <span>
               <PhoneIcon />
               +44 7979 374288
