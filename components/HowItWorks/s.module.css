@@ -1,0 +1,228 @@
+.section {
+  /* display: flex; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 16px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1366px;
+  border-bottom: 1px solid var(--header-border-color);
+  background-color: var(--header-background-color);
+}
+
+.title {
+  text-align: center;
+  margin: 0;
+  font-family: "Fjalla One";
+  font-weight: 400;
+  font-size: 50px;
+  color: var(--color-black);
+  margin-bottom: 30px;
+}
+
+.child {
+  margin-bottom: 32px;
+}
+
+.numberFeature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 5px rgba(189, 255, 0, 0.4);
+  color: var(--color-black);
+  background-color: var(--color-green);
+  font-size: 18px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.featureTitle {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-family: "Open Sans";
+  font-size: 24px;
+  line-height: 33px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.featureDescription {
+  text-align: center;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  margin: 0;
+  /* margin-bottom: 10px; */
+}
+
+.mapContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 64px 0 0 0;
+}
+
+.schedule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+  font-family: "Open Sans";
+  border-radius: 50px;
+  border: 2px solid var(--color-black);
+  background: conic-gradient(#fff 0deg, #fff 90deg, var(--color-green) 91deg);
+}
+
+.coverage {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.locationTitle {
+  text-align: center;
+  font-size: 55px;
+  line-height: 69px;
+  font-family: "Fjalla One";
+  font-weight: 400;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.mapDiv {
+  display: flex;
+  align-items: flex-end;
+  height: 420px;
+  width: 100%;
+  max-width: 1366px;
+  background-color: var(--color-light-grey);
+  margin-top: 16px;
+  overflow: scroll;
+}
+
+.mapDiv::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+}
+
+.mapDiv::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.locationSwipe {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.locationSwipe span {
+  margin-right: 10px;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 30px 30px 30px 30px;
+  background-color: var(--color-white);
+}
+
+@media all and (min-width: 769px) {
+  .childContainer {
+    display: flex;
+  }
+
+  .child {
+    margin: 0 15px 0;
+  }
+  .featureTitle {
+    text-align: center;
+  }
+
+  .container {
+    padding: 60px 40px;
+  }
+
+  .mapContainer {
+    padding: 64px 16px 16px 16px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .title {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .locationTitle {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .mapContainer {
+    padding: 64px 40px;
+  }
+}
+
+@media all and (min-width: 1441px) {
+  .title {
+    font-size: 100px;
+    line-height: 126px;
+  }
+
+  .locationTitle {
+    font-size: 100px;
+    line-height: 126px;
+  }
+}
+
+@media all and (prefers-color-scheme: dark) {
+  .title {
+    color: var(--color-white);
+  }
+  .featureTitle {
+    color: var(--color-white);
+  }
+  .featureDescription {
+    color: var(--color-white);
+  }
+  .coverage {
+    color: var(--color-white);
+  }
+  .locationTitle {
+    color: var(--color-white);
+  }
+
+  .mapDiv {
+    background-color: var(--color-medium-grey);
+  }
+
+  .locationSwipe span {
+    color: var(--color-white);
+    background-color: var(--header-border-color);
+    border: 1px solid var(--color-white);
+  }
+
+  .schedule {
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    background: conic-gradient(
+      var(--color-dark-grey) 0deg,
+      var(--color-dark-grey) 90deg,
+      var(--color-medium-grey) 91deg
+    );
+  }
+}

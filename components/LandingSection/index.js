@@ -19,22 +19,24 @@ export function LandingSection() {
           <button className={s.learnMoreButton}>Learn more</button>
         </div>
       </div>
-      <div className={s.featuresContainer}>
-        <div className={s.feature}>
-          <Icon1 />
-          Fast Roadside Response
-        </div>
-        <div className={s.feature}>
-          <Icon2 />
-          Back on the Road in 1 Hour
-        </div>
-        <div className={s.feature}>
-          <Icon3 />
-          Fully Insured
-        </div>
-        <div className={s.feature}>
-          <Icon4 />
-          Fully mobile
+      <div className={s.featuresSection}>
+        <div className={s.featuresContainer}>
+          <div className={s.feature}>
+            <Icon1 />
+            Fast Roadside Response
+          </div>
+          <div className={s.feature}>
+            <Icon2 />
+            Back on the Road in 1 Hour
+          </div>
+          <div className={s.feature}>
+            <Icon3 />
+            Fully Insured
+          </div>
+          <div className={s.feature}>
+            <Icon4 />
+            Fully mobile
+          </div>
         </div>
       </div>
     </section>

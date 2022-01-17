@@ -94,6 +94,10 @@
   }
 }
 
+.featuresSection {
+  background-color: var(--color-green);
+}
+
 .featuresContainer {
   display: flex;
   flex-direction: column;
@@ -119,6 +123,9 @@
   .featuresContainer {
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1366px;
   }
 
   .feature svg {
@@ -128,5 +135,11 @@
 
   .feature {
     flex-direction: column;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .featuresContainer {
+    padding: 8px 40px 40px 40px;
   }
 }

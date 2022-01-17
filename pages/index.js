@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { Header } from "../components/Header";
+import { HowItWorks } from "../components/HowItWorks";
 import { LandingSection } from "../components/LandingSection";
+import { Requirements } from "../components/Requirements";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
       <Header />
       <main>
         <LandingSection />
+        <HowItWorks />
+        <Requirements />
       </main>
     </div>
   );
