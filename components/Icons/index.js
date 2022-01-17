@@ -168,3 +168,19 @@ export function PlusIcon() {
     </svg>
   );
 }
+
+export function RatingStar() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 25 23"
+      style={{ width: 32, height: 32 }}
+    >
+      <path
+        fill="#BDFF00"
+        d="m12.5 0 2.8064 8.63729h9.0818l-7.3473 5.33811 2.8064 8.6373L12.5 17.2746l-7.34732 5.3381 2.80643-8.6373L.611794 8.63729H9.69357L12.5 0Z"
+      />
+    </svg>
+  );
+}

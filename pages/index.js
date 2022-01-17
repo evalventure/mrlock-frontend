@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { HowItWorks } from "../components/HowItWorks";
 import { LandingSection } from "../components/LandingSection";
 import { Requirements } from "../components/Requirements";
+import { Reviews } from "../components/Reviews";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <LandingSection />
         <HowItWorks />
         <Requirements />
+        <Reviews />
       </main>
     </div>
   );
