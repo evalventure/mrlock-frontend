@@ -1,0 +1,110 @@
+.section {
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 60px 0 60px 16px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-family: "Fjalla One";
+  font-size: 55px;
+  line-height: 69px;
+  color: var(--color-black);
+  font-weight: 400;
+}
+
+.subTitle {
+  text-align: center;
+  font-family: "Fjalla One";
+  font-size: 55px;
+  line-height: 69px;
+  color: var(--color-green);
+  font-weight: 400;
+}
+
+.sliderContainer {
+  display: flex;
+  /* flex-direction: row; */
+  padding-top: 30px;
+  width: 100%;
+  max-width: 769px;
+  overflow: scroll;
+}
+
+.sliderDiv {
+  display: flex;
+  height: 100%;
+  margin-left: 4px;
+  /* margin-bottom: 20px; */
+  /* margin-left: 100px; */
+}
+
+.sliderContainer::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+}
+
+.sliderContainer::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.pictureSlider {
+  margin-right: 30px;
+  width: 300px;
+  height: 300px;
+  background-color: grey;
+}
+
+@media all and (min-width: 769px) {
+  .sliderContainer {
+    max-width: 1366px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .title {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .subTitle {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .title {
+    font-size: 100px;
+    line-height: 120px;
+  }
+
+  .subTitle {
+    font-size: 100px;
+    line-height: 120px;
+  }
+
+  .sliderContainer {
+    justify-content: center;
+  }
+}
+
+@media all and (prefers-color-scheme: dark) {
+  .title {
+    color: var(--color-white);
+  }
+}
