@@ -4,6 +4,9 @@ import { HowItWorks } from "../components/HowItWorks";
 import { LandingSection } from "../components/LandingSection";
 import { Requirements } from "../components/Requirements";
 import { Reviews } from "../components/Reviews";
+import { FollowUs } from "../components/FollowUs";
+import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +27,9 @@ export default function Home() {
         <HowItWorks />
         <Requirements />
         <Reviews />
+        <FollowUs />
+        <Contact />
+        <Footer />
       </main>
     </div>
   );

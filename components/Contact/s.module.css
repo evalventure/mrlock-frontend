@@ -1,0 +1,276 @@
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 60px 16px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  /* padding: 60px 16px; */
+}
+
+.formAgreementButton_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* max-width: 1366px; */
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Fjalla One";
+  font-size: 55px;
+  line-height: 69px;
+  font-weight: 400;
+  align-items: flex-start;
+}
+
+.phoneNumber {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  padding-top: 24px;
+}
+
+.phoneNumber svg {
+  margin-right: 10px;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  padding-top: 24px;
+}
+
+.mail svg {
+  margin-right: 10px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: center;
+  width: 100%;
+  padding-top: 72px;
+}
+
+.formContainer input {
+  /* max-width: 380px; */
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.formName {
+  padding: 16px 0 16px 20px;
+  width: 100%;
+  max-width: 380px;
+  color: #000;
+  border: 0;
+  border: 1px solid var(--color-light-grey);
+}
+
+.formName::placeholder {
+  color: var(--color-black);
+}
+
+.formEmail {
+  padding: 16px 0 16px 20px;
+  width: 100%;
+  max-width: 380px;
+  margin-top: 24px;
+  line-height: 22px;
+  border: 1px solid var(--color-light-grey);
+}
+
+.formEmail::placeholder {
+  color: var(--color-black);
+}
+
+.formService {
+  padding: 16px 0 16px 20px;
+  width: 100%;
+  max-width: 380px;
+  margin-top: 24px;
+  line-height: 22px;
+  border: 1px solid var(--color-light-grey);
+}
+
+.formService::placeholder {
+  color: var(--color-black);
+}
+
+.formDetails {
+  /* padding: 0px 0 64px 20px; */
+  width: 100%;
+  max-width: 380px;
+  margin-top: 24px;
+  line-height: 60px;
+  border: 1px solid var(--color-light-grey);
+  background-color: var(--color-white);
+}
+
+.formDetails::placeholder {
+  color: var(--color-black);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Open Sans";
+  font-style: italic;
+  padding: 16px 0 16px 20px;
+}
+
+.agreementContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  width: 100%;
+  max-width: 1366px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.agreementContainer input {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.confirmStatement {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  font-family: "Open Sans";
+  color: var(--color-black);
+  text-align: left;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.contactButton {
+  margin-top: 30px;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-green);
+  background-color: var(--color-black);
+  border: 0;
+  padding: 12px 30px 12px 30px;
+}
+
+@media all and (min-width: 769px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .formContainer {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .agreementContainer {
+    max-width: 390px;
+  }
+
+  .buttonContainer {
+    justify-content: flex-end;
+  }
+}
+
+@media all and (max-width: 769px) {
+  .formContainer input {
+    max-width: 380px;
+  }
+
+  .container {
+    border-bottom: 1px solid var(--color-light-grey);
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .title {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .container {
+    padding: 60px 40px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .title {
+    font-size: 100px;
+    line-height: 120px;
+  }
+}
+
+@media all and (prefers-color-scheme: dark) {
+  .title {
+    color: var(--color-white);
+  }
+  .phoneNumber {
+    color: var(--color-white);
+  }
+
+  .mail {
+    color: var(--color-white);
+  }
+
+  .confirmStatement {
+    color: var(--color-white);
+  }
+
+  .formContainer input {
+    background-color: var(--color-dark-grey);
+    border: 1px solid var(--color-light-grey);
+  }
+
+  .formName::placeholder {
+    color: var(--color-light-grey);
+  }
+
+  .formService::placeholder {
+    color: var(--color-light-grey);
+  }
+
+  .formEmail::placeholder {
+    color: var(--color-light-grey);
+  }
+
+  .formDetails::placeholder {
+    color: var(--color-light-grey);
+  }
+
+  .contactButton {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+}
