@@ -6,10 +6,20 @@ export function Footer() {
     <section className={s.section}>
       <div className={s.container}>
         <div className={s.socialMediaContainer}>
-          <a className={s.facebookIcon}>
+          <a
+            className={s.facebookIcon}
+            href="https://www.facebook.com/mrlock247"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FacebookIcon />
           </a>
-          <a className={s.googleIcon}>
+          <a
+            className={s.googleIcon}
+            href="https://goo.gl/maps/oUnmAauoDc2QTeoy7"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GoogleIcon />
           </a>
         </div>

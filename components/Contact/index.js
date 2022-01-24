@@ -7,14 +7,14 @@ export function Contact() {
       <div className={s.container}>
         <div className={s.contactContainer}>
           <div className={s.title}>CONTACT US</div>
-          <div className={s.phoneNumber}>
+          <a className={s.phoneNumber} href="tel:+447979374288">
             <ContactPhone className={s.phoneIcon} />
             +44 7979 374288
-          </div>
-          <div className={s.mail}>
+          </a>
+          <a className={s.mail} href="mailto:mrlock247@gmail.com">
             <MailIcon />
             mrlock247@gmail.com
-          </div>
+          </a>
         </div>
         <div className={s.formAgreementButton_Container}>
           <form className={s.formContainer}>
