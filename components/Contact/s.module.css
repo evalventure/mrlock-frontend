@@ -124,21 +124,23 @@
 }
 
 .formDetails {
-  /* padding: 0px 0 64px 20px; */
+  padding: 0px 0 64px 0px;
   width: 100%;
   max-width: 380px;
   margin-top: 24px;
-  line-height: 60px;
+  line-height: 22px;
   border: 1px solid var(--color-light-grey);
-  background-color: var(--color-white);
+  background-color: var(--color-dark-grey);
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .formDetails::placeholder {
   color: var(--color-black);
   font-size: 16px;
-  line-height: 24px;
-  font-family: "Open Sans";
-  font-style: italic;
+  line-height: 22px;
   padding: 16px 0 16px 20px;
 }
 
@@ -267,10 +269,27 @@
 
   .formDetails::placeholder {
     color: var(--color-light-grey);
+    background-color: var(--color-dark-grey);
   }
 
   .contactButton {
     background-color: var(--color-white);
     color: var(--color-black);
+  }
+
+  .formName {
+    color: var(--color-white);
+  }
+
+  .formEmail {
+    color: var(--color-white);
+  }
+
+  .formService {
+    color: var(--color-white);
+  }
+
+  .formDetails {
+    color: var(--color-white);
   }
 }

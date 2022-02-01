@@ -7,6 +7,7 @@ import { Reviews } from "../components/Reviews";
 import { FollowUs } from "../components/FollowUs";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
+import { Services } from "../components/Services";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Header />
       <main>
         <LandingSection />
+        <Services />
         <HowItWorks />
         <Requirements />
         <Reviews />
