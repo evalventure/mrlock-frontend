@@ -46,7 +46,7 @@ export function Services() {
             <div className={s.sliders}>
               {sliders.map((sliderItem, i) => {
                 return (
-                  <div className={s.sliderStep} onClick={() => { onStepClick(i) }}>
+                  <div key={i} className={s.sliderStep} onClick={() => { onStepClick(i) }}>
                     <div
                       className={`${s.segment} ${i === step ? s.active : ""}`}
                     >
@@ -68,8 +68,12 @@ function Popups() {
   const [open, setOpen] = useState([false, false])
 
   function onSetOpen(index) {
-    const newOpen = Array(2).fill(false).map((elem, idx) => index === idx)
-    setOpen(newOpen);
+    if (open[index]) {
+      setOpen([false, false]);
+    } else {
+      const newOpen = Array(2).fill(false).map((elem, idx) => index === idx)
+      setOpen(newOpen);
+    }
   }
 
   return (

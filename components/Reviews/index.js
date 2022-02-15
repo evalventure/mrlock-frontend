@@ -22,9 +22,9 @@ export function Reviews() {
       <div className={s.container}>
         <div className={s.title}>WHAT PEOPLE SAY</div>
         <div className={s.reviewContainer}>
-          {reviews.map(function (review) {
+          {reviews.map(function (review, idx) {
             return (
-              <div className={s.reviewCard}>
+              <div key={idx} className={s.reviewCard}>
                 <p className={s.titleParagraph}>Sukhy Kaur Dyail </p>
                 <p className={s.date}>
                   {new Date(review.created_time).toLocaleString()}
