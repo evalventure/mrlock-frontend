@@ -16,18 +16,16 @@ export function HowItWorks() {
           </div>
           <div className={s.child}>
             <div className={s.numberFeature}>2</div>
-            <p className={s.featureTitle}>We'll come to you</p>
+            <p className={s.featureTitle}>{"We'll come to you"}</p>
             <p className={s.featureDescription}>
-              Once we understand the situation, we’ll get to you as quickly as
-              we can – our average response time is 45 minutes.
+              {"Once we understand the situation, we’ll get to you as quickly as we can – our average response time is 45 minutes."}
             </p>
           </div>
           <div className={s.child}>
             <div className={s.numberFeature}>3</div>
             <p className={s.featureTitle}>New keys instantly</p>
             <p className={s.featureDescription}>
-              We’ll provide you with your replacement keys, so you can get back
-              on the road as soon as possible.
+              {"We'll provide you with your replacement keys, so you can get back on the road as soon as possible."}
             </p>
           </div>
         </div>
