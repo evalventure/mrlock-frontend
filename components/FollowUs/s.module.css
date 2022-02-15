@@ -6,6 +6,7 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 
   padding: 60px 0 60px 16px;
@@ -38,6 +39,7 @@
 
 .sliderContainer {
   display: flex;
+
   /* flex-direction: row; */
   padding-top: 30px;
   width: 100%;

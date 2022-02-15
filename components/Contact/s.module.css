@@ -124,7 +124,8 @@
 }
 
 .formDetails {
-  padding: 0px 0 64px 0px;
+  padding: 20px 20px 20px 20px;
+  height: 180px;
   width: 100%;
   max-width: 380px;
   margin-top: 24px;
@@ -135,6 +136,7 @@
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
+  background-color: var(--color-white);
 }
 
 .formDetails::placeholder {
@@ -142,6 +144,7 @@
   font-size: 16px;
   line-height: 22px;
   padding: 16px 0 16px 20px;
+  background-color: var(--color-white);
 }
 
 .agreementContainer {
@@ -291,5 +294,6 @@
 
   .formDetails {
     color: var(--color-white);
+    background-color: var(--color-dark-grey);
   }
 }

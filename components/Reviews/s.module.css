@@ -87,6 +87,9 @@
 }
 
 @media all and (min-width: 769px) {
+  .reviewCard {
+    min-width: 460px;
+  }
 }
 
 @media all and (min-width: 1025px) {

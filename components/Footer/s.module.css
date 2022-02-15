@@ -31,6 +31,10 @@
   margin: 0 5px;
 }
 
+.facebookIcon:hover {
+  background-color: var(--color-green);
+}
+
 .googleIcon {
   display: flex;
   justify-content: center;
@@ -40,6 +44,10 @@
   color: var(--color-white);
   background-color: var(--color-black);
   margin: 0 5px;
+}
+
+.googleIcon:hover {
+  background-color: var(--color-green);
 }
 
 .footerParagraph {
