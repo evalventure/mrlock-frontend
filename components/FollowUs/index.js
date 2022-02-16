@@ -1,7 +1,22 @@
+import axios from "axios";
 import s from "./s.module.css";
 import Image from "../Images/greyBckg.jpg";
+import { useEffect, useState } from "react";
 
 export function FollowUs() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getPosts();
+  }, []);
+
+  async function getPosts() {
+    const response = await axios.get(
+      "https://euy5lyrql4.execute-api.us-east-1.amazonaws.com/default/getBirminghamAutoLocksmithPagePosts"
+    );
+    setPosts(response.data.posts);
+  }
+
   return (
     <section className={s.section}>
       <div className={s.container}>
@@ -10,12 +25,13 @@ export function FollowUs() {
           <div className={s.subTitle}>FACEBOOK</div>
         </div>
         <div className={s.sliderContainer}>
-          <div className={s.sliderDiv}>
-            <img className={s.pictureSlider}></img>
-            <img className={s.pictureSlider}></img>
-            <img className={s.pictureSlider}></img>
-            <img className={s.pictureSlider}></img>
-          </div>
+          {posts.map(function (img, index) {
+            return (
+              <div key={index} className={s.sliderDiv}>
+                <img className={s.pictureSlider} src={img.full_picture} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
