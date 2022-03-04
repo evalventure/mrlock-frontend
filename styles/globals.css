@@ -5,6 +5,7 @@
   --color-medium-grey: #5b5b5b;
   --color-light-grey: #dddddd;
   --color-green: #bdff00;
+  --color-red: #AA0000;
 
   --header-background-color: var(--color-white);
   --header-email-color: var(--color-black);

@@ -1,7 +1,58 @@
 import s from "./s.module.css";
 import { ContactPhone, MailIcon } from "../Icons";
+import { useRef, useState } from "react";
+import axios from "axios";
+
+const contactApiUrl = "https://zkwatgtbj3.execute-api.us-east-1.amazonaws.com/default/sendEmailToAutolocksmithBirmingham";
 
 export function Contact() {
+  const nameInputRef = useRef();
+  const emailInputRef = useRef();
+  const detailsInputRef = useRef();
+  const checkboxInputRef = useRef();
+
+  const [error, setError] = useState("");
+  // setError("ceva") <=> error = "ceva"
+  const [isLoading, setLoading] = useState(false);
+
+  async function onFormSubmit(e) {
+    e.preventDefault();
+
+    // step 1: reset errors
+    setError(setError(""))
+
+    // step 2: retrieve form data from fields
+    const name = nameInputRef.current.value;
+    const email = emailInputRef.current.value;
+    const details = detailsInputRef.current.value;
+
+    // step 4: validations
+    if (!name || !email) {
+      setError("Please fill in the name and the email address");
+      return;
+    }
+    
+    if (!checkboxInputRef.current.checked) {
+      setError("Please accept the Privacy Statement to proceed");
+      return;
+    }
+
+    try {
+      const data = { name, email, details };
+
+      setLoading(true);
+      await axios.post(contactApiUrl, data);
+      setLoading(false);
+
+      nameInputRef.current.value = "";
+      emailInputRef.current.value = "";
+      detailsInputRef.current.value = "";
+    } catch {
+      setLoading(false);
+      setError("Oopss...Please try again later")
+    }
+  }
+
   return (
     <section className={s.section}>
       <div className={s.container}>
@@ -16,40 +67,37 @@ export function Contact() {
             mrlock247@gmail.com
           </a>
         </div>
-        <div className={s.formAgreementButton_Container}>
-          <form className={s.formContainer}>
-            <input
-              type={"text"}
-              placeholder="Your name"
-              className={s.formName}
-            ></input>
-            <input
-              type={"text"}
-              placeholder="Your email address"
-              className={s.formEmail}
-            ></input>
-            <input
-              type={"text"}
-              placeholder="Choose service"
-              className={s.formService}
-            ></input>
-            <textarea
-              type={"text"}
-              placeholder="Details (optional)"
-              className={s.formDetails}
-            ></textarea>
-          </form>
+        <form className={s.formContainer} onSubmit={onFormSubmit}>
+          <input
+            ref={nameInputRef}
+            type={"text"}
+            placeholder="Your name"
+            className={s.formInput}
+          ></input>
+          <input
+            ref={emailInputRef}
+            className={s.formInput}
+            placeholder="Your email address"
+            type="email"
+          ></input>
+          <textarea
+            ref={detailsInputRef}
+            type={"text"}
+            placeholder="Details (optional)"
+            className={s.formDetails}
+          ></textarea>
           <div className={s.agreementContainer}>
-            <input type={"checkbox"}></input>
-            <p className={s.confirmStatement}>
+            <input ref={checkboxInputRef} id="confirmCheckbox" type={"checkbox"} />
+            <label className={s.confirmStatement} htmlFor="confirmCheckbox">
               I confirm that I have read, understand and agree the Mr. Lock
               Privacy Statement.
-            </p>
+            </label>
           </div>
-          <div className={s.buttonContainer}>
-            <button className={s.contactButton}> Contact us now</button>
-          </div>
-        </div>
+          {error && <p className={s.formError}>{error}</p>}
+          <button className={s.contactButton} type="submit" disabled={isLoading}>
+            {isLoading ? "Sending..." : "Contact us now"}
+          </button>
+        </form>
       </div>
     </section>
   );
