@@ -75,7 +75,7 @@
   padding: 16px 0 16px 20px;
   margin: 0 0 24px;
   width: 100%;
-  color: #000;
+  color: var(--color-black);
   border: 1px solid var(--color-light-grey);
 }
 
@@ -89,12 +89,11 @@
   width: 100%;
   line-height: 22px;
   border: 1px solid var(--color-light-grey);
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-white);
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
-  background-color: var(--color-white);
   color: var(--color-black);
 }
 
@@ -202,22 +201,7 @@
     border: 1px solid var(--color-light-grey);
   }
 
-  .formName::placeholder {
-    color: var(--color-light-grey);
-  }
-
-  .formService::placeholder {
-    color: var(--color-light-grey);
-  }
-
-  .formEmail::placeholder {
-    color: var(--color-light-grey);
-  }
-
-  .formDetails::placeholder {
-    color: var(--color-light-grey);
-    background-color: var(--color-dark-grey);
-  }
+  
 
   .contactButton {
     background-color: var(--color-white);
@@ -236,8 +220,21 @@
     color: var(--color-white);
   }
 
+  .formInput {
+    color: var(--color-white);
+  }
+
+  .formInput::placeholder {
+    color: var(--color-light-grey);
+  }
+
   .formDetails {
     color: var(--color-white);
+    background-color: var(--color-dark-grey);
+  }
+
+  .formDetails::placeholder {
+    color: var(--color-light-grey);
     background-color: var(--color-dark-grey);
   }
 }
