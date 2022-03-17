@@ -72,10 +72,12 @@
 .description {
   padding: 10px 20px 0 20px;
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   font-style: italic;
   font-weight: 400;
+  height: 185px;
+  overflow: hidden;
 }
 
 .starContainer {
@@ -86,11 +88,21 @@
 
 .starContainer svg {
   margin-left: 10px;
+  color: var(--color-light-grey);
+}
+
+.starContainer svg.highlighted {
+  color: var(--color-green);
 }
 
 @media all and (min-width: 769px) {
   .reviewCard {
     min-width: 460px;
+  }
+
+  .description {
+    font-size: 16px;
+    height: 120px;
   }
 }
 
@@ -128,5 +140,8 @@
   }
   .container {
     border: 0;
+  }
+  .starContainer svg {
+    color: var(--color-medium-grey);
   }
 }

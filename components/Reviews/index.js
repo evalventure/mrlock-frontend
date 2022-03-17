@@ -25,17 +25,14 @@ export function Reviews() {
           {reviews.map(function (review, idx) {
             return (
               <div key={idx} className={s.reviewCard}>
-                <p className={s.titleParagraph}>Sukhy Kaur Dyail </p>
+                <p className={s.titleParagraph}>{review.author_name}</p>
                 <p className={s.date}>
                   {new Date(review.created_time).toLocaleString()}
                 </p>
                 <p className={s.description}>{review.review_text}</p>
                 <div className={s.starContainer}>
-                  <RatingStar />
-                  <RatingStar />
-                  <RatingStar />
-                  <RatingStar />
-                  <RatingStar />
+                  {Array(review.rating).fill(0).map((_, idx) => <RatingStar key={idx} className={s.highlighted} />)}
+                  {Array(5 - review.rating).fill(0).map((_, idx) => <RatingStar key={idx} />)}
                 </div>
               </div>
             );
