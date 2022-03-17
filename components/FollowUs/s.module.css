@@ -39,8 +39,6 @@
 
 .sliderContainer {
   display: flex;
-
-  /* flex-direction: row; */
   padding-top: 30px;
   width: 100%;
   max-width: 769px;
@@ -48,11 +46,9 @@
 }
 
 .sliderDiv {
+  position: relative;
   display: flex;
-  height: 100%;
   margin-left: 4px;
-  /* margin-bottom: 20px; */
-  /* margin-left: 100px; */
 }
 
 .sliderContainer::-webkit-scrollbar {
@@ -70,6 +66,17 @@
   height: 300px;
   background-color: grey;
   object-fit: cover;
+}
+
+.pictureCaption {
+  position: absolute;
+  left: 20px;
+  right: 10px;
+  bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-white);
 }
 
 @media all and (min-width: 769px) {

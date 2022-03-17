@@ -29,6 +29,7 @@ export function FollowUs() {
             return (
               <div key={index} className={s.sliderDiv}>
                 <img className={s.pictureSlider} src={img.full_picture} />
+                <span className={s.pictureCaption}>{img.message?.split(" ").slice(0, 5).join(" ")}</span>
               </div>
             );
           })}
