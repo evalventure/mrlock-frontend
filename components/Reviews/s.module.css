@@ -23,6 +23,7 @@
 }
 
 .reviewContainer {
+  min-height: 350px;
   padding: 0 16px;
   display: flex;
   padding-top: 30px;
