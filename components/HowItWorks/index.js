@@ -1,5 +1,4 @@
 import s from "./s.module.css";
-import Image from "next/image";
 
 export function HowItWorks() {
   return (
@@ -36,9 +35,7 @@ export function HowItWorks() {
         <p className={s.coverage}>coverage</p>
         <p className={s.locationTitle}>BIRMINGHAM AND WEST MIDLANDS</p>
         <div className={s.mapDiv}>
-          <div className={s.mapImage}>
-            <Image src="/images/map.png" alt="Map" layout="fill" objectFit="cover" />
-          </div>
+          <img className={s.mapImage} src="/images/map.png" alt="Map" />
           <div className={s.locationIndicator}>
             <div className={s.locationPin}>
               <img src="/icons/location.svg" alt="location" height={20} />

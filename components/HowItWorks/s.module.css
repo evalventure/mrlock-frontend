@@ -118,15 +118,17 @@
   display: block;
   height: 440px;
   width: 100%;
+  object-fit: cover;
 }
 
 .locationSwipe {
+  display: flex;
+  padding: 0 20px;
   position: absolute;
   bottom: 20px;
   left: 0;
   right: 0;
-  padding: 0 20px;
-  display: flex;
+  overflow: scroll;
 }
 
 .locationSwipe::-webkit-scrollbar {
