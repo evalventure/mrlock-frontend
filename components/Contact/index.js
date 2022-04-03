@@ -3,7 +3,7 @@ import { ContactPhone, MailIcon } from "../Icons";
 import { useRef, useState } from "react";
 import axios from "axios";
 
-const contactApiUrl = "https://jme9r7e028.execute-api.us-east-1.amazonaws.com/default/sendEmailToBirmingham";
+const contactApiUrl = "https://2sxxem0xhf.execute-api.us-east-1.amazonaws.com/default/sendEmailToAutolocksmithBirmingham";
 
 export function Contact() {
   const nameInputRef = useRef();
@@ -42,13 +42,7 @@ export function Contact() {
       const data = { name, email, details };
 
       setLoading(true);
-      await axios.post(contactApiUrl, data, {
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        crossDomain: true
-      });
+      await axios.post(contactApiUrl, data);
       setLoading(false);
 
       nameInputRef.current.value = "";
