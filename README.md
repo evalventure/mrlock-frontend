@@ -6,6 +6,30 @@ Address: <https://mrlock247.co.uk/>
 
 Design: <https://www.figma.com/file/wTtlUQAcV7yHPjt5x2yOcU/2021-12-01---Mr.-Lock---website---v1---BD?node-id=0%3A1>
 
+## CI/CD for building the static files
+
+The CI/CD workflow for generating the static files can be triggered by creating new tags with vX.X.X format
+
+1. Create new tag
+```
+git tag v0.0.1
+```
+
+2. Push the new created tag
+```
+git push origin v0.0.1
+```
+
+3. `Build static website` workflow is triggered automatically. It installs the project dependencies, builds the application and export the static files
+
+4. The static files can be accessed by downloading the `static-site` archive from the artifacts section.
+
+<img width="892" alt="Screenshot 2022-04-03 at 04 49 27" src="https://user-images.githubusercontent.com/11219583/161407791-830972a5-4d6e-4261-987c-3cc067f7d3a1.png">
+
+5. Update the static files on the server / cloud platform
+
+# NextJS decomentation
+
 ## Getting Started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
