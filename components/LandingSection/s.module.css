@@ -31,7 +31,10 @@
 }
 
 .callUsButton {
-  padding: 10px 20px;
+  display: block;
+  width: fit-content;
+  margin-top: 40px;
+  padding: 10px 30px;
   color: var(--color-green);
   background-color: #000;
   font-family: "Open Sans";
@@ -39,8 +42,8 @@
   font-size: 18px;
   line-height: 30px;
   border: none;
-  margin-top: 40px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 @media all and (min-width: 769px) {
