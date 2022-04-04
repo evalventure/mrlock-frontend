@@ -16,7 +16,9 @@ export function LandingSection() {
             model of car, this means we are able to supply cut and program
             replacement keys today.
           </p>
-          <button className={s.learnMoreButton}>Learn more</button>
+          <a className={s.callUsButton} href="tel:+447979374288">
+            Call Us
+          </a>
         </div>
       </div>
       <div className={s.featuresSection}>
