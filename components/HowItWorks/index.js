@@ -1,4 +1,5 @@
 import s from "./s.module.css";
+import { locations } from "./data";
 
 export function HowItWorks() {
   return (
@@ -18,14 +19,18 @@ export function HowItWorks() {
             <div className={s.numberFeature}>2</div>
             <p className={s.featureTitle}>{"We'll come to you"}</p>
             <p className={s.featureDescription}>
-              {"Once we understand the situation, we’ll get to you as quickly as we can – our average response time is 45 minutes."}
+              {
+                "Once we understand the situation, we’ll get to you as quickly as we can – our average response time is 45 minutes."
+              }
             </p>
           </div>
           <div className={s.child}>
             <div className={s.numberFeature}>3</div>
             <p className={s.featureTitle}>New keys instantly</p>
             <p className={s.featureDescription}>
-              {"We'll provide you with your replacement keys, so you can get back on the road as soon as possible."}
+              {
+                "We'll provide you with your replacement keys, so you can get back on the road as soon as possible."
+              }
             </p>
           </div>
         </div>
@@ -45,13 +50,9 @@ export function HowItWorks() {
             <div className={s.radar} />
           </div>
           <div className={s.locationSwipe}>
-            <span>Birmingham</span>
-            <span>Black Country</span>
-            <span>Wolverhampton</span>
-            <span>Telford</span>
-            <span>Cannock</span>
-            <span>Solihull</span>
-            <span>Warwickshire</span>
+            {locations.map((location) => {
+              return <span>{location}</span>;
+            })}
           </div>
         </div>
       </div>
