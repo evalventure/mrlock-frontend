@@ -40,10 +40,10 @@ export function HowItWorks() {
         <p className={s.coverage}>coverage</p>
         <p className={s.locationTitle}>BIRMINGHAM AND WEST MIDLANDS</p>
         <div className={s.mapDiv}>
-          <img className={s.mapImage} src="/images/map.png" alt="Map" />
+          <img className={s.mapImage} src="/images/map.png" alt="Map Image" />
           <div className={s.locationIndicator}>
             <div className={s.locationPin}>
-              <img src="/icons/location.svg" alt="location" height={20} />
+              <img src="/icons/location.svg" alt="Location Image" height={20} />
             </div>
             <div className={s.radar} />
             <div className={s.radar} />
