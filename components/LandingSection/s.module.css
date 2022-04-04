@@ -30,7 +30,7 @@
   font-weight: 400;
 }
 
-.learnMoreButton {
+.callUsButton {
   padding: 10px 20px;
   color: var(--color-green);
   background-color: #000;
@@ -88,7 +88,7 @@
     color: var(--color-white);
   }
 
-  .learnMoreButton {
+  .callUsButton {
     background-color: var(--color-white);
     color: var(--color-black);
   }

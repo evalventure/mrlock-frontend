@@ -3,11 +3,15 @@ import { ContactPhone, MailIcon } from "../Icons";
 import { useRef, useState } from "react";
 import axios from "axios";
 
-const contactApiUrl = "https://2sxxem0xhf.execute-api.us-east-1.amazonaws.com/default/sendEmailToAutolocksmithBirmingham";
+const contactApiUrl =
+  "https://2sxxem0xhf.execute-api.us-east-1.amazonaws.com/default/sendEmailToAutolocksmithBirmingham";
 
 export function Contact() {
   const nameInputRef = useRef();
+  const locationInputRef = useRef();
+  const phoneInputRef = useRef();
   const emailInputRef = useRef();
+  const carRegInputRef = useRef();
   const detailsInputRef = useRef();
   const checkboxInputRef = useRef();
 
@@ -19,11 +23,14 @@ export function Contact() {
     e.preventDefault();
 
     // step 1: reset errors
-    setError(setError(""))
+    setError(setError(""));
 
     // step 2: retrieve form data from fields
     const name = nameInputRef.current.value;
+    const location = locationInputRef.current.value;
+    const phone = phoneInputRef.current.value;
     const email = emailInputRef.current.value;
+    const carReg = carRegInputRef.current.value;
     const details = detailsInputRef.current.value;
 
     // step 3: validations
@@ -31,7 +38,7 @@ export function Contact() {
       setError("Please fill in the name and the email address");
       return;
     }
-    
+
     if (!checkboxInputRef.current.checked) {
       setError("Please accept the Privacy Statement to proceed");
       return;
@@ -39,18 +46,21 @@ export function Contact() {
 
     // step 4: process data
     try {
-      const data = { name, email, details };
+      const data = { name, location, phone, email, carReg, details };
 
       setLoading(true);
       await axios.post(contactApiUrl, data);
       setLoading(false);
 
       nameInputRef.current.value = "";
+      locationInputRef.current.value = "";
+      phoneInputRef.current.value = "";
       emailInputRef.current.value = "";
+      carRegInputRef.current.value = "";
       detailsInputRef.current.value = "";
     } catch {
       setLoading(false);
-      setError("Oopss...Please try again later")
+      setError("Oopss...Please try again later");
     }
   }
 
@@ -81,6 +91,24 @@ export function Contact() {
             placeholder="Your email address"
             type="email"
           ></input>
+          <input
+            ref={phoneInputRef}
+            type={"text"}
+            placeholder="Phone Number"
+            className={s.formInput}
+          ></input>
+          <input
+            ref={locationInputRef}
+            type={"text"}
+            placeholder="Your location or Postal Code"
+            className={s.formInput}
+          ></input>
+          <input
+            ref={carRegInputRef}
+            type={"text"}
+            placeholder="Car's maker, model and year"
+            className={s.formInput}
+          ></input>
           <textarea
             ref={detailsInputRef}
             type={"text"}
@@ -88,14 +116,22 @@ export function Contact() {
             className={s.formDetails}
           ></textarea>
           <div className={s.agreementContainer}>
-            <input ref={checkboxInputRef} id="confirmCheckbox" type={"checkbox"} />
+            <input
+              ref={checkboxInputRef}
+              id="confirmCheckbox"
+              type={"checkbox"}
+            />
             <label className={s.confirmStatement} htmlFor="confirmCheckbox">
               I confirm that I have read, understand and agree the Mr. Lock
               Privacy Statement.
             </label>
           </div>
           {error && <p className={s.formError}>{error}</p>}
-          <button className={s.contactButton} type="submit" disabled={isLoading}>
+          <button
+            className={s.contactButton}
+            type="submit"
+            disabled={isLoading}
+          >
             {isLoading ? "Sending..." : "Contact us now"}
           </button>
         </form>
