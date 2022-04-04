@@ -23,7 +23,7 @@ export function Contact() {
     e.preventDefault();
 
     // step 1: reset errors
-    setError(setError(""));
+    setError("");
 
     // step 2: retrieve form data from fields
     const name = nameInputRef.current.value;
@@ -94,13 +94,13 @@ export function Contact() {
           <input
             ref={phoneInputRef}
             type={"text"}
-            placeholder="Phone Number"
+            placeholder="Your phone number"
             className={s.formInput}
           ></input>
           <input
             ref={locationInputRef}
             type={"text"}
-            placeholder="Your location or Postal Code"
+            placeholder="Your car's location or postal code"
             className={s.formInput}
           ></input>
           <input
