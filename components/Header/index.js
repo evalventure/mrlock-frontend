@@ -33,7 +33,10 @@ export function Header() {
           >
             <GoogleIcon />
           </a>
-          <a className={s.whatsappLink} href="https://wa.me/447979374288">
+          <a
+            className={s.whatsappLink}
+            href="https://wa.me/447979374288?text=Hi,%20Emilian%20"
+          >
             <PhoneIcon />
           </a>
           <a className={s.phoneLink} href="tel:+447979374288">
