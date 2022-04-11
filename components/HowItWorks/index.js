@@ -50,8 +50,8 @@ export function HowItWorks() {
             <div className={s.radar} />
           </div>
           <div className={s.locationSwipe}>
-            {locations.map((location) => {
-              return <span>{location}</span>;
+            {locations.map((location, idx) => {
+              return <span key={idx}>{location}</span>;
             })}
           </div>
         </div>
