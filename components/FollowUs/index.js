@@ -28,8 +28,14 @@ export function FollowUs() {
           {posts.map(function (img, index) {
             return (
               <div key={index} className={s.sliderDiv}>
-                <img className={s.pictureSlider} src={img.full_picture} />
-                <span className={s.pictureCaption}>{img.message?.split(" ").slice(0, 5).join(" ")}</span>
+                <img
+                  className={s.pictureSlider}
+                  src={img.full_picture}
+                  alt="Slider Image"
+                />
+                <span className={s.pictureCaption}>
+                  {img.message?.split(" ").slice(0, 5).join(" ")}
+                </span>
               </div>
             );
           })}
