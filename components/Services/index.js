@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import s from "./s.module.css";
-import { sliders } from './data';
+import { sliders } from "./data";
 import { PlusIcon } from "../Icons";
 // import Image from "../images/backgroundImage.jpeg";
 
@@ -12,7 +12,9 @@ export function Services() {
   }, []);
 
   function startInterval() {
-    if (interv) { clearInterval(interv) }
+    if (interv) {
+      clearInterval(interv);
+    }
     const newInterval = setInterval(() => {
       setStep((step) => {
         if (step <= 5) {
@@ -36,7 +38,11 @@ export function Services() {
         <div className={s.slideShowContainer}>
           <div className={s.backgroundContainer}>
             <div className={s.imageOverlay} />
-            <img className={s.image} src="backgroundImage.jpeg" alt="" />
+            <img
+              className={s.image}
+              src="backgroundImage.jpeg"
+              alt="Background Image"
+            />
           </div>
           <MobilePopup />
           <Popups />
@@ -46,13 +52,25 @@ export function Services() {
             <div className={s.sliders}>
               {sliders.map((sliderItem, i) => {
                 return (
-                  <div key={i} className={s.sliderStep} onClick={() => { onStepClick(i) }}>
+                  <div
+                    key={i}
+                    className={s.sliderStep}
+                    onClick={() => {
+                      onStepClick(i);
+                    }}
+                  >
                     <div
                       className={`${s.segment} ${i === step ? s.active : ""}`}
                     >
                       <div></div>
                     </div>
-                    <p className={`${s.segmentTitle} ${i === step ? s.active : ""}`}>{sliderItem.title}</p>
+                    <p
+                      className={`${s.segmentTitle} ${
+                        i === step ? s.active : ""
+                      }`}
+                    >
+                      {sliderItem.title}
+                    </p>
                   </div>
                 );
               })}
@@ -65,13 +83,15 @@ export function Services() {
 }
 
 function Popups() {
-  const [open, setOpen] = useState([false, false])
+  const [open, setOpen] = useState([false, false]);
 
   function onSetOpen(index) {
     if (open[index]) {
       setOpen([false, false]);
     } else {
-      const newOpen = Array(2).fill(false).map((elem, idx) => index === idx)
+      const newOpen = Array(2)
+        .fill(false)
+        .map((elem, idx) => index === idx);
       setOpen(newOpen);
     }
   }
@@ -79,8 +99,20 @@ function Popups() {
   return (
     <div className={s.popupsContainer}>
       <div className={s.popupsContent}>
-        <Popup index={1} open={open[0]} setOpen={() => { onSetOpen(0) }} />
-        <Popup index={2} open={open[1]} setOpen={() => { onSetOpen(1) }} />
+        <Popup
+          index={1}
+          open={open[0]}
+          setOpen={() => {
+            onSetOpen(0);
+          }}
+        />
+        <Popup
+          index={2}
+          open={open[1]}
+          setOpen={() => {
+            onSetOpen(1);
+          }}
+        />
       </div>
     </div>
   );
@@ -92,18 +124,17 @@ function Popup({ index, open, setOpen }) {
   }
 
   return (
-    <div className={`${s.popup} ${open ? '' : s.hidden} ${s[`popup${index}`]}`}>
+    <div className={`${s.popup} ${open ? "" : s.hidden} ${s[`popup${index}`]}`}>
       <button className={`${open ? s.active : ""}`} onClick={onClickButton}>
         <PlusIcon />
       </button>
-      <div className={`${s.popupText} ${open ? '' : s.hidden}`}>
+      <div className={`${s.popupText} ${open ? "" : s.hidden}`}>
         <span>{`Sometimes it's just because the car immobilizer doesn't recognize the keys.`}</span>
         <span>{`We can add them to your car system or create a new key for your vehicle.`}</span>
       </div>
     </div>
-  )
+  );
 }
-
 
 function MobilePopup({ index }) {
   const [open, setOpen] = useState(false);
@@ -113,11 +144,11 @@ function MobilePopup({ index }) {
   }
 
   return (
-    <div className={`${s.mobilePopup} ${open ? '' : s.hidden}`}>
+    <div className={`${s.mobilePopup} ${open ? "" : s.hidden}`}>
       <button className={`${open ? s.active : ""}`} onClick={onClickButton}>
         <PlusIcon />
       </button>
-      <div className={`${s.mobilePopupText} ${open ? '' : s.hidden}`}>
+      <div className={`${s.mobilePopupText} ${open ? "" : s.hidden}`}>
         <div className={s.popupText}>
           <span>{`Sometimes it's just because the car immobilizer doesn't recognize the keys.`}</span>
           <span>{`We can add them to your car system or create a new key for your vehicle.`}</span>
@@ -128,5 +159,5 @@ function MobilePopup({ index }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
