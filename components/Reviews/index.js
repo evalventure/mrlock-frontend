@@ -11,10 +11,18 @@ export function Reviews() {
   }, []);
 
   async function getReviews() {
-    const response = await axios.get(
-      "https://e4xwlli09l.execute-api.us-east-1.amazonaws.com/default/getBirminghamAutoLocksmithPageReviews"
-    );
-    setReviews(response.data.reviews);
+    try {
+      const response = await axios.get(
+        "https://e4xwlli09l.execute-api.us-east-1.amazonaws.com/default/getBirminghamAutoLocksmithPageReviews"
+      );
+      if (response.data.error) {
+        setReviews([]);
+      } else {
+        setReviews(response.data.reviews);
+      }
+    } catch (error) {
+      setReviews([]);
+    }
   }
 
   return (
