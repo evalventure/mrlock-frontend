@@ -11,10 +11,19 @@ export function FollowUs() {
   }, []);
 
   async function getPosts() {
-    const response = await axios.get(
-      "https://euy5lyrql4.execute-api.us-east-1.amazonaws.com/default/getBirminghamAutoLocksmithPagePosts"
-    );
-    setPosts(response.data.posts);
+    try {
+      const response = await axios.get(
+        "https://euy5lyrql4.execute-api.us-east-1.amazonaws.com/default/getBirminghamAutoLocksmithPagePosts"
+      );
+
+      if (response.data.error) {
+        setPosts([]);
+      } else {
+        setPosts(response.data.posts);
+      }
+    } catch (error) {
+
+    }
   }
 
   return (
