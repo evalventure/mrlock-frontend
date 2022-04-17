@@ -13,6 +13,11 @@ export default function Document() {
           }}
       />
       {/* End Google Tag Manager */}
+      <Head lang="en" />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
       {/* Google Tag Manager (noscript) */}
       <noscript
           dangerouslySetInnerHTML={{
@@ -20,11 +25,6 @@ export default function Document() {
           }}
       />
       {/* End Google Tag Manager (noscript) */}
-      <Head lang="en" />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
     </Html>
   )
 }
