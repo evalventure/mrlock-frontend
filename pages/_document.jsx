@@ -11,6 +11,8 @@ export default function Document() {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-K9ZHLKG');`}}></script>
         {/* End Google Tag Manager */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137178551510754"
+        crossOrigin="anonymous"></script>
       </Head>
       <body>
           {/* Google Tag Manager (noscript) */}
