@@ -13,6 +13,19 @@ export default function Document() {
         {/* End Google Tag Manager */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137178551510754"
         crossOrigin="anonymous"></script>
+        {/* <!-- Global site tag (gtag.js) - Google Ads: 10779330119 --> */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10779330119" ></script>
+
+        <script dangerouslySetInnerHTML={{ __html:`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-10779330119');`}}></script>
+
+        <script dangerouslySetInnerHTML={{ __html: `
+          gtag('config', 'AW-10779330119/CBx1CPb6z8MDEMeM_pMo', {
+            'phone_conversion_number': '+44 7979 374288'
+          });`}}></script>
       </Head>
       <body>
           {/* Google Tag Manager (noscript) */}
