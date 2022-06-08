@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content h1 {
+  font-family: "Fjalla One";
+  font-size: 55px;
+  line-height: 69px;
+  color: var(--color-black);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: 18px;
+  font-family: "Open Sans";
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@media all and (min-width: 769px) {
+  .content p {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .content p {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .content h1 {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+
+@media all and (min-width: 1441px) {
+  .content p {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .content h1 {
+    font-size: 100px;
+    line-height: 120px;
+  }
+}
+
+@media all and (prefers-color-scheme: dark) {
+  .content h1 {
+    color: var(--color-green);
+  }
+
+  .content p {
+    color: var(--color-white);
+  }
+}
