@@ -50,7 +50,7 @@ export function Contact() {
       const data = { name, location, phone, email, carReg, details };
 
       setLoading(true);
-      // await axios.post(contactApiUrl, data);
+      await axios.post(contactApiUrl, data);
       setLoading(false);
 
       nameInputRef.current.value = "";
