@@ -2,6 +2,7 @@ import s from "./s.module.css";
 import { ContactPhone, MailIcon } from "../Icons";
 import { useRef, useState } from "react";
 import axios from "axios";
+import { getRedirectStatus } from "next/dist/lib/load-custom-routes";
 
 const contactApiUrl =
   "https://2sxxem0xhf.execute-api.us-east-1.amazonaws.com/default/sendEmailToAutolocksmithBirmingham";
@@ -49,7 +50,7 @@ export function Contact() {
       const data = { name, location, phone, email, carReg, details };
 
       setLoading(true);
-      await axios.post(contactApiUrl, data);
+      // await axios.post(contactApiUrl, data);
       setLoading(false);
 
       nameInputRef.current.value = "";
@@ -59,7 +60,7 @@ export function Contact() {
       carRegInputRef.current.value = "";
       detailsInputRef.current.value = "";
 
-      window.location.href = "/thankyou";
+      window.location.href = "/thank-you";
     } catch {
       setLoading(false);
       setError("Oopss...Please try again later");
@@ -129,6 +130,7 @@ export function Contact() {
             </label>
           </div>
           {error && <p className={s.formError}>{error}</p>}
+
           <button
             className={s.contactButton}
             type="submit"
