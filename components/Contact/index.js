@@ -59,7 +59,7 @@ export function Contact() {
       carRegInputRef.current.value = "";
       detailsInputRef.current.value = "";
 
-      window.location.href = "/thankyou";
+      window.location.href = "/thank-you";
     } catch {
       setLoading(false);
       setError("Oopss...Please try again later");
