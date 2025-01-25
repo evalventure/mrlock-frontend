@@ -1,4 +1,11 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
-  swcMinify: false,
+  swcMinify: true,
+  // Ensure compatibility with older browsers if needed
+  experimental: {
+    forceSwcTransforms: true,
+  }
 };
+
+module.exports = nextConfig;

@@ -32,7 +32,7 @@ export function WebsiteHead() {
       <link
         href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@400;600;700&display=swap"
         rel="stylesheet"
-      ></link>
+      />
     </Head>
   );
 }
