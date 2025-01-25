@@ -28,7 +28,7 @@ export function WebsiteHead() {
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
       <link
         href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@400;600;700&display=swap"
         rel="stylesheet"

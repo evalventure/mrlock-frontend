@@ -12,7 +12,7 @@ export default function Document() {
         })(window,document,'script','dataLayer','GTM-585VSPV4');`}}></script>
         {/* End Google Tag Manager */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137178551510754"
-        crossOrigin="anonymous"></script>
+        crossOrigin="true"></script>
         {/* <!-- Global site tag (gtag.js) - Google Ads: 10779330119 --> */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10779330119" ></script>
 
